@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include "binary_trees.h"
 
+/**
+ * binary_tree_depth - checks the depth of a node
+ *
+ * @tree: the pointer to the node
+ * Return: depth as size_t
+ */
+
+
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
 	size_t size = 0;
@@ -9,16 +17,14 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-	else
+	if (tmp->parent)
 	{
-		if (tmp->parent)
+		while (tmp->parent)
 		{
-			while (tmp->parent)
-			{
-				tmp = tmp->parent; 
-				size += 1;
-			}
+			tmp = tmp->parent;
+			size += 1;
 		}
 	}
+
 	return (size);
 }
