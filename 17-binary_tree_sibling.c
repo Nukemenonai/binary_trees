@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling
+ * binary_tree_sibling - finds out the sibling of a node
  *
  * @node: the node to evaluate
  * Return: Always 0 (Success)
